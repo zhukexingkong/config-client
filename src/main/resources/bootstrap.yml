@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: stage
+
+---
+spring:
+  profiles: qa
+  application:
+    name: config
+  cloud:
+    config:
+      uri: http://localhost:8081
+      profile: qa
+
+---
+spring:
+  profiles: stage
+  application:
+    name: config
+  cloud:
+    config:
+      uri: http://localhost:8081
+      profile: stage
+
+---
+spring:
+  profiles: prod
+  application:
+    name: config
+  cloud:
+    config:
+      uri: http://localhost:8081
+      profile: prod
