@@ -1,18 +1,15 @@
 server:
   port: 8082
 
-management:
-  endpoint:
-    shutdown:
-      enabled: false
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 data:
   env: NaN
   user:
     username: NaN
     password: NaN
-
